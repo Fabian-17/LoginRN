@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { TextInput, Button, HelperText } from 'react-native-paper';
+import { Link } from 'expo-router';
 
 
 export default function LoginScreen() {
@@ -49,8 +50,8 @@ export default function LoginScreen() {
       />
       <HelperText type="error" visible={!isUsernameValid && username !== ''}>
         {isEmail
-          ? 'Enter a valid email address.'
-          : 'Username must be 5-10 characters long.'}
+          ? 'Ingresa un correo electrónico válido.'
+          : 'El nombre de usuario debe tener entre 5 y 10 caracteres.'}
       </HelperText>
       <TextInput
         label="Password"
@@ -62,11 +63,13 @@ export default function LoginScreen() {
         error={!isPasswordValid && password !== ''}
       />
       <HelperText type="error" visible={!isPasswordValid && password !== ''}>
-        Password must be at least 5 characters long and contain at least one uppercase letter, one lowercase letter, and one symbol.
+        La contraseña debe tener al menos 5 caracteres, una mayúscula, una minúscula y un carácter especial.
       </HelperText>
+      <Link href="/screens/home" asChild>
       <Button mode="contained" onPress={handleLogin} disabled={!isUsernameValid || !isPasswordValid}>
         Login
       </Button>
+      </Link>
     </View>
   );
 }

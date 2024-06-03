@@ -1,16 +1,15 @@
-// app/(tabs)/explore.tsx
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 import { Button } from 'react-native-paper';
 import { Link } from 'expo-router';
 
-export default function ExploreScreen() {
+export default function TaskScreen() {
   return (
     <View style={styles.container}>
       <Image source={{ uri: 'https://placekitten.com/400/400' }} style={styles.image} />
-      <Text style={styles.title}>Welcome to the Explore Page</Text>
-      <Text style={styles.subtitle}>Discover new and exciting content!</Text>
-      <Link href="/(tabs)/index" asChild>
+      <Text style={styles.title}>Bienvenido</Text>
+      <Text style={styles.subtitle}>Tareas</Text>
+      <Link href="/screens/home" asChild>
         <Button mode="contained" style={styles.button}>
           Go to Home
         </Button>
