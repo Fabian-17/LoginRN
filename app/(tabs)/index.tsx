@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, ImageBackground } from 'react-native';
 import { TextInput, Button, HelperText } from 'react-native-paper';
 import { Link } from 'expo-router';
 
@@ -38,6 +38,7 @@ export default function LoginScreen() {
   };
 
   return (
+    <ImageBackground source={{uri: 'https://i.pinimg.com/originals/03/39/d9/0339d9fbec3aa3bdd3fb459f4366e309.jpg'}} style={{'height': '100%'}}>
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
       <TextInput
@@ -71,6 +72,7 @@ export default function LoginScreen() {
       </Button>
       </Link>
     </View>
+    </ImageBackground>
   );
 }
 

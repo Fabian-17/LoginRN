@@ -6,14 +6,8 @@ import { Link } from 'expo-router';
 export default function ExploreScreen() {
   return (
     <View style={styles.container}>
-      <Image source={{ uri: 'https://placekitten.com/400/400' }} style={styles.image} />
       <Text style={styles.title}>Bienvenido</Text>
-      <Text style={styles.subtitle}>Ola</Text>
-      <Link href="/" asChild>
-        <Button mode="contained" style={styles.button}>
-          Go to Home
-        </Button>
-      </Link>
+
     </View>
   );
 }
@@ -37,14 +31,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
     textAlign: 'center',
-  },
-  subtitle: {
-    fontSize: 18,
-    color: '#666',
-    marginBottom: 20,
-    textAlign: 'center',
-  },
-  button: {
-    marginTop: 20,
   },
 });

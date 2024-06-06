@@ -3,20 +3,27 @@ import { View, StyleSheet, Text, Image } from 'react-native';
 import { Button } from 'react-native-paper';
 import { Link } from 'expo-router';
 
+
 export default function TaskScreen() {
+
+  const handleThemeChange = () => {
+
+  };
+
   return (
     <View style={styles.container}>
-      <Image source={{ uri: 'https://placekitten.com/400/400' }} style={styles.image} />
-      <Text style={styles.title}>Bienvenido</Text>
-      <Text style={styles.subtitle}>Tareas</Text>
-      <Link href="/screens/home" asChild>
-        <Button mode="contained" style={styles.button}>
-          Go to Home
-        </Button>
-      </Link>
+      <Text style={styles.title}>Settings</Text>
+      <Text style={styles.subtitle}>Change theme and language</Text>
+      <Button mode="contained" style={styles.button} onPress={() => handleThemeChange()}>
+        Change Theme
+      </Button>
+      <Button mode="contained" style={styles.button} onPress={() => handleLanguageChange()}>
+        Change Language
+      </Button>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -48,3 +55,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 });
+
+function handleThemeChange() {
+  // TODO: Implement theme change logic
+}
+
+function handleLanguageChange() {
+  // TODO: Implement language change logic
+}
