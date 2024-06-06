@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "titulo": "Estudiar para el examen de matemáticas",
+        "descripcion": "Repasar los temas de álgebra y geometría",
+        "autor": "Juan",
+        "fecha": "2022-10-01"
+    },
+    {
+        "id": 2,
+        "titulo": "Limpiar la casa",
+        "descripcion": "Barrer, trapear y ordenar los cuartos",
+        "autor": "María",
+        "fecha": "2022-10-05"
+    },
+    {
+        "id": 3,
+        "titulo": "Hacer ejercicio",
+        "descripcion": "Realizar una rutina de ejercicios cardiovasculares",
+        "autor": "Pedro",
+        "fecha": "2022-10-10"
+    },
+    {
+        "id": 4,
+        "titulo": "Preparar la cena",
+        "descripcion": "Cocinar una comida saludable y equilibrada",
+        "autor": "Ana",
+        "fecha": "2022-10-15"
+    },
+    {
+        "id": 5,
+        "titulo": "Leer un libro",
+        "descripcion": "Sumergirse en una historia fascinante",
+        "autor": "Luis",
+        "fecha": "2022-10-20"
+    }
+]

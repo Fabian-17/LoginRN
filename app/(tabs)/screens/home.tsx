@@ -1,12 +1,14 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
+import { useTheme } from '@/context/ThemeContext';
 import { Button } from 'react-native-paper';
 import { Link } from 'expo-router';
 
-export default function ExploreScreen() {
+export default function HomeScreen() {
+  const { theme } = useTheme();
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Bienvenido</Text>
+    <View style={[styles.container, { backgroundColor: theme.background }]}>
+      <Text style={[styles.title, { color: theme.text }]}>Bienvenido</Text>
 
     </View>
   );
@@ -18,7 +20,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: '#f5f5f5',
   },
   image: {
     width: 200,
