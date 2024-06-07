@@ -1,17 +1,24 @@
 import task from '@/assets/task.json';
 import { FlatList , View, Text, StyleSheet } from 'react-native';
 import{ Card } from 'react-native-paper';
+import { useTheme } from '@/context/ThemeContext';
+import { Link } from 'expo-router';
 
 export default function ListaTareas() {
+    const { theme } = useTheme();
+
     return (
-        <View>
-            <Text style={styles.title}>Lista de tareas</Text>
+        <View style={[styles.container, { backgroundColor: theme.background }]}>
+            <Text style={[styles.title, { color: theme.text }]}>Lista de tareas</Text>
             <FlatList
                 data={task}
+                keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item }) => (
+                    <Link href={`/${item.id}`} asChild>
                     <Card style={styles.card}>
                         <Card.Title title={item.titulo}></Card.Title>
                     </Card>
+                    </Link>
                 )}
             />  
         </View>
@@ -19,6 +26,10 @@ export default function ListaTareas() {
 };
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        height: '100%',
+    },
     card: {
         margin: 15,
         padding: 10,

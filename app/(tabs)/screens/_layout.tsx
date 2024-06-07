@@ -26,21 +26,21 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="setting"
-        options={{
-          title: 'Setting',
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons name="settings-sharp" size={24} color={color} />
-          ),
-          headerShown: false,
-        }}
-      />
-            <Tabs.Screen
         name="listaTareas"
         options={{
           title: 'list',
           tabBarIcon: ({ color, focused }) => (
             <FontAwesome5 name="clipboard-list" size={24} color={color} />
+          ),
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="setting"
+        options={{
+          title: 'Setting',
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons name="settings-sharp" size={24} color={color} />
           ),
           headerShown: false,
         }}

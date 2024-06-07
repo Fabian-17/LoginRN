@@ -10,6 +10,7 @@ export default function TabLayout() {
     }}
     >
       <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="[id]" options={{headerShown: true, title:'Tarea' }} />
     </Stack>
   );
 }
