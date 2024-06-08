@@ -3,6 +3,7 @@ import { FlatList , View, Text, StyleSheet } from 'react-native';
 import{ Card } from 'react-native-paper';
 import { useTheme } from '@/context/ThemeContext';
 import { Link } from 'expo-router';
+import AnimatedFabComponent from '@/components/AnimatedFabComponent';
 
 export default function ListaTareas() {
     const { theme } = useTheme();
@@ -21,6 +22,9 @@ export default function ListaTareas() {
                     </Link>
                 )}
             />  
+            <Link href="/newTask" asChild>
+            <AnimatedFabComponent visible={true} />
+            </Link>
         </View>
     );
 };
