@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Card } from 'react-native-paper';
+import { Button, Card } from 'react-native-paper';
 import task from '@/assets/task.json';
-import { useLocalSearchParams } from 'expo-router';
+import { useLocalSearchParams, router } from 'expo-router';
 import { useTheme } from '@/context/ThemeContext';
 
 export default function ViewTask() {
@@ -21,6 +21,13 @@ export default function ViewTask() {
         );
     }
 
+    const handleEdit = () => {
+        router.navigate({
+            pathname: `/(tabs)/editTask`,
+        });
+    }
+
+
     return (
         <View style={[styles.container, { backgroundColor: theme.background }]}>
         <Card style={styles.card}>
@@ -34,6 +41,7 @@ export default function ViewTask() {
             <Card.Actions>
                 <Text>{tarea.fecha}</Text>
             </Card.Actions>
+            <Button onPress={handleEdit} mode="contained">Editar</Button>
         </Card>
     </View>
     )

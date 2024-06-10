@@ -19,7 +19,7 @@ export default function SettingScreen() {
       </Button>
       <Link href="/" asChild>
         <Button mode="contained" style={styles.button}>
-          Go to Home
+          Cerrar Sesión
         </Button>
       </Link>
     </View>
